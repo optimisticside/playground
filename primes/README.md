@@ -1,0 +1,2 @@
+## Primes
+This is a simple C program that simply generates prime numbers. It goes through all numbers, and checks if each of them are a prime. If the number is a prime, it will append the number to a file.

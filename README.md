@@ -1,0 +1,2 @@
+# Playground
+This is a place where I post things I made that I think are nice, but don't think that they're large enough to be their own repository/project. If you want to contribute, feel free to do so.
