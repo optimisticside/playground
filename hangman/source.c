@@ -98,7 +98,7 @@ void do_guess(struct hangman *game) {
             printf("Character already entered");
 
             /* call function again */
-            do_guess(game);
+            return do_guess(game);
         }
     }
 
@@ -129,7 +129,7 @@ void do_guess(struct hangman *game) {
     }
 
     /* call function recursively and continue game */
-    do_guess(game);
+    return do_guess(game);
 }
 
 int main(int argc, char **argv) {
