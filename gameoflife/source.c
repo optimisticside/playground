@@ -78,7 +78,7 @@ void evolve(struct univ *world) {
         struct cell *cell = &world->cells[i];
         uint32_t neighbors = count_neighbors(cell);
 
-        /* check if cell is alive */
+        /* if cell is alive */
         if (cell->alive) {
             /* handle overpopulation */
             if (neighbors > 3) {
@@ -88,6 +88,8 @@ void evolve(struct univ *world) {
             } else if (neighbors < 2) {
                 cell->alive = 0;
             }
+
+        /* if cell is dead */
         } else {
             /* handle reproduction */
             if (neighbors == 3) {
