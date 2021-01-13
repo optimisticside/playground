@@ -115,7 +115,7 @@ void do_guess(struct hangman *game) {
         game->victory = 1;
 
         /* end the game */
-        end_game(game);
+        return end_game(game);
     }
 
     /* check how many guesses left */
