@@ -72,6 +72,9 @@ uint32_t count_neighbors(struct univ *world, struct cell *cell) {
 
 /* evolves the universe */
 void evolve(struct univ *world) {
+    /* initially assume world was not updated */
+    world->updated = 0;
+
     /* go through all cells */
     for (uint32_t i = 0; i < world->cell_count; i++) {
         /* get current cell and neighbors */
@@ -83,10 +86,12 @@ void evolve(struct univ *world) {
             /* handle overpopulation */
             if (neighbors > 3) {
                 cell->alive = 0;
+                world->updated = 1;
 
             /* handle underpopulation */
             } else if (neighbors < 2) {
                 cell->alive = 0;
+                world->updated = 1;
             }
 
         /* if cell is dead */
@@ -94,6 +99,7 @@ void evolve(struct univ *world) {
             /* handle reproduction */
             if (neighbors == 3) {
                 cell->alive = 1;
+                world->updated = 1;
             }
         }
     }
@@ -108,6 +114,7 @@ struct univ *create(uint32_t size_x, uint32_t size_y, uint32_t alive) {
     world->cell_count = size_x * size_y;
     world->column_count = size_x;
     world->row_count = size_y;
+    world->updated = 1;
     world->cells = (struct cell *)calloc(world->cell_count, sizeof(struct cell));
 
     /* initialize cells */
