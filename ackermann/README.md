@@ -1,0 +1,2 @@
+# Ackermann's function
+Ackermann's function is an example of a function that *must* be done recursively. Things such as factorials, exponents and fibonacci sequences, can be done recursively, yet also with loops. These is known is primitive recursion, as in it's optional. Ackermann's function cannot be done with loops, as it relies on itself to determine the arguments to call itself with.
