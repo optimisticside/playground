@@ -1,2 +1,2 @@
-# Fork bomb
+## Fork bomb
 This is a really simple x86 assembly program that just forks itself into two processes, and repeats the process. I wouldn't recommend running this, as it can really flood your operating systems with processes. It should work on any POSIX-complaint operating system (basically every major operating system including Windows, macOS, Linux, and BSD).

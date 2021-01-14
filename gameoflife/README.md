@@ -1,4 +1,4 @@
-# Game of Life
+## Game of Life
 The game of a life is a cellular automation created by John Horton Conway in 1970. It follows very simple rules, as stated below:
 1. If an alive cell has more than 3 neighbors, it dies of overpopulation
 2. If an alive cell has less than 2 neighbors, it dies of underpopulation
