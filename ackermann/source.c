@@ -28,6 +28,6 @@ int main(int argc, char **argv) {
         int res = ack(a, b);
 
         /* print result */
-        printf("Ackermann of %d and %d is %d", a, b, res);
+        printf("Ackermann of %d and %d is %d\n", a, b, res);
     }
 }

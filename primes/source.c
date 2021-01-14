@@ -69,7 +69,7 @@ int main(int argc, char **argv) {
 
     /* throw error if unable to open file */
     if (!file) {
-        printf("Unable to open file");
+        printf("Unable to open file\n");
         return -1;
     }
 

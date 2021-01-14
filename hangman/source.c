@@ -76,7 +76,7 @@ void end_game(struct hangman *game) {
 
     /* victory screen */
     if (game->victory) {
-        printf("Victory!\nSolved in %u guesses", game->max_guesses);
+        printf("Victory!\nSolved in %u guesses\n", game->max_guesses);
 
     /* failure screen */
     } else {
@@ -95,7 +95,7 @@ void do_guess(struct hangman *game) {
     for (uint32_t i = 0; i < game->guess_count; i++) {
         if (game->guesses[i] == guess) {
             /* inform player about mistake */
-            printf("Character already entered");
+            printf("Character already entered\n");
 
             /* call function again */
             return do_guess(game);
