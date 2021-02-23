@@ -79,7 +79,7 @@ int main(int argc, char **argv) {
     size_t buffer_len = 0;
 
     /* run through loop */
-    while (1) {
+    for (;;) {
         /* calculate next number */
         curr_num = next_prime(curr_num);
 
